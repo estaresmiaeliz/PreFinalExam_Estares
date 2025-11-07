@@ -6,6 +6,23 @@ body {
   background-color: #e99aff; /* soft pink background */
   color: #222;
   text-align: center; /* center text globally */
+
+  /* ✅ Center the entire page horizontally */
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in-out; /* ✨ smooth fade-in */
+}
+
+/* ================= FADE-IN ANIMATION ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ================= HEADER ================= */
@@ -14,6 +31,9 @@ body {
   color: #442b35;
   padding: 1.5rem 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .header h1 {
@@ -34,7 +54,7 @@ body {
 /* ================= NAVIGATION ================= */
 .header nav {
   display: flex;
-  justify-content: center; /* centers horizontally */
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 0.5rem;
@@ -60,9 +80,12 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers all child elements */
+  align-items: center;
   justify-content: center;
   padding: 30px 0;
+  width: 100%;
+  max-width: 1200px;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 /* ================= FILTER & TOTAL ================= */
@@ -78,12 +101,13 @@ body {
 /* ================= PRODUCT GRID ================= */
 .grid {
   display: flex;
-  justify-content: center; /* centers all product cards */
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 25px;
   width: 100%;
   max-width: 1100px;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 /* ================= PRODUCT CARD ================= */
@@ -94,20 +118,17 @@ body {
   text-align: center;
   padding: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  /* ➡️ REPLACE THIS LINE: transition: transform 0.3s ease;
-     WITH THE NEW LINE BELOW:
-  */
-  transition: all 1.2s ease-in-out, transform 0.3s ease; 
+  transition: all 1.2s ease-in-out, transform 0.3s ease;
   width: 280px;
+
+  /* ✨ Each card fades in smoothly */
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .card:hover {
   transform: scale(1.05);
-}
-.card:hover {
-  transform: scale(1.05);
-  /* ➡️ ADD THIS LINE: */
-  background: #6a1b9a; /* A noticeable color change for testing */
+  background: #6a1b9a;
 }
 
 .card img {
@@ -150,6 +171,7 @@ body {
 
 .card-actions button:hover {
   background-color: #00c853;
+  transform: scale(1.05);
 }
 
 /* ================= ADD PRODUCT FORM ================= */
@@ -162,6 +184,7 @@ body {
   margin-top: 40px;
   max-width: 600px;
   width: 90%;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .addform h2 {
@@ -203,6 +226,7 @@ body {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .cart-table {
@@ -224,6 +248,11 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cart-table button:hover {
+  background: #6a1b9a;
 }
 
 /* ================= FOOTER ================= */
@@ -232,6 +261,9 @@ body {
   padding: 15px;
   background-color: #fcd9f9;
   color: #442b35;
-  margin-top: 40px;
+  margin: 40px auto 0;
   font-size: 0.9rem;
+  width: 100%;
+  max-width: 1200px;
+  animation: fadeIn 1.2s ease-in-out;
 }
