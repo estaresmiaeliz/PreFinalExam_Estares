@@ -1,17 +1,17 @@
-/* ================= GLOBAL STYLE ================= */
 body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #e99aff; /* soft pink background */
+  background: url("/public/background.jpg") no-repeat center center fixed; /* 🌷 your image file */
+  background-size: cover; /* makes the image fill the entire screen */
   color: #222;
-  text-align: center; /* center text globally */
+  text-align: center;
 
-  /* ✅ Center the entire page horizontally */
+  /* ✅ Keep page centered */
   display: flex;
   justify-content: center;
-  animation: fadeIn 1.2s ease-in-out; /* ✨ smooth fade-in */
 }
+
 
 /* ================= FADE-IN ANIMATION ================= */
 @keyframes fadeIn {
@@ -27,7 +27,7 @@ body {
 
 /* ================= HEADER ================= */
 .header {
-  background: #fcd9f9;
+  background: linear-gradient(90deg, #f6d7e3, #d125e0);
   color: #442b35;
   padding: 1.5rem 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -159,7 +159,7 @@ body {
 }
 
 .card-actions button {
-  background-color: #00e676;
+  background-color: #ee82ab;
   border: none;
   color: #000;
   padding: 8px 14px;
@@ -259,7 +259,7 @@ body {
 .footer {
   text-align: center;
   padding: 15px;
-  background-color: #fcd9f9;
+  background-color: #bb3ab0;
   color: #442b35;
   margin: 40px auto 0;
   font-size: 0.9rem;
