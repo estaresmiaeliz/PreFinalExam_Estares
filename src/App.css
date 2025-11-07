@@ -94,12 +94,20 @@ body {
   text-align: center;
   padding: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  /* ➡️ REPLACE THIS LINE: transition: transform 0.3s ease;
+     WITH THE NEW LINE BELOW:
+  */
+  transition: all 1.2s ease-in-out, transform 0.3s ease; 
   width: 280px;
 }
 
 .card:hover {
   transform: scale(1.05);
+}
+.card:hover {
+  transform: scale(1.05);
+  /* ➡️ ADD THIS LINE: */
+  background: #6a1b9a; /* A noticeable color change for testing */
 }
 
 .card img {
